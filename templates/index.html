@@ -43,7 +43,6 @@
             object-fit: cover; /* Ensure the image covers the area */
             opacity: 0.7; /* Adjust opacity to make the image semi-transparent */
             z-index: 1;
-
         }
         .logo {
             font-family: 'Caveat', cursive;
@@ -119,20 +118,46 @@
             display: none;
             z-index: 5;
         }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ea00da22;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            z-index: 3;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'tts' %}">Speak aloud</a>
+        <a href="{% url 'mcqs' %}">MCQs</a>
+        <a href="{% url 'upload' %}">File summarize</a>
+    </div>
+    
     <video class="background-video" autoplay muted loop>
         <source src="{% static 'bg3.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <img class="overlay-image" src="{% static 'image.png' %}" usemap="#image-map" alt="Background Image">
-    <map name="image-map">
-        <area shape="rect" coords="5,5,7,7" alt="Rectangle 1" id="rect1">
-        <area shape="rect" coords="210,10,400,200" alt="Rectangle 2">
-        <area shape="rect" coords="10,210,200,400" alt="Rectangle 3">
-        <area shape="rect" coords="210,210,400,400" alt="Rectangle 4">
-    </map>
+    
     <div class="logo">Rizer</div>
     <textarea name="article" id="article" rows="20" cols="50" placeholder="Paste your article here..."></textarea>
     <br>
