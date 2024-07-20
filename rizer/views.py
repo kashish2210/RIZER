@@ -6,8 +6,7 @@ import os
 import json
 
 
-apiKey = "AIzaSyDv9bp4_xSayJxH6GnXdCfhdfqsZMERxr4"
-
+apiKey = "api key"
 def home(request):
     context = {}
     return render(request, 'index.html', context)
