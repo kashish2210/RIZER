@@ -28,7 +28,8 @@ urlpatterns = [
     path('upload-file', views.upload_file, name='upload_file'),
     path('mcqs', views.mcqs, name="mcqs"),
     path('getMcqs', views.getMcqs, name="getMcqs"),
-    path('tts', views.tts, name="tts")
+    path('tts', views.tts, name="tts"),
+    path('login', views.login, name="login")
 
 ]
 

@@ -149,3 +149,6 @@ i am going to use the result of this prompt in webapp so only provide five quest
 
 def tts(request):
     return render(request, 'speaker.html')
+
+def login(request):
+    return render(request, 'login.html')
